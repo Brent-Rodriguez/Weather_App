@@ -1,7 +1,6 @@
 const key = 'PUT YOUR API KEY HERE'
 
 //Get Weather Info
-
 const getWeather = async (locationID) => {
   const base = 'http://dataservice.accuweather.com/currentconditions/v1/'
   const query = `${locationID}?apikey=${key}`
