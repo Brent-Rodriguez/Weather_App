@@ -22,15 +22,23 @@ const updateUI = (data) => {
     </div>
 `;
 
-// Remove d-none class
+// Update Time/ Icons
+const iconSrc = `img/icons/${weather.WeatherIcon}.svg`;
+icon.setAttribute('src', iconSrc);
 
+let timeSrc = null;
+if(weather.IsDayTime){
+  timeSrc = 'img/day.svg';
+} else {
+  timeSrc = 'img/night.svg';
+}
+time.setAttribute('src', timeSrc);
+
+// Remove d-none Class
 if(card.classList.contains('d-none')){
-  card.classList.remove('d-none')
+  card.classList.remove('d-none');
 }
-
-
-
-}
+};
 
 
 
