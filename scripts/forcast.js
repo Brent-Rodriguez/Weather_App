@@ -1,4 +1,4 @@
-const key = 'PUT YOUR API KEY HERE'
+const key = ''
 
 //Get Weather Info
 
@@ -15,6 +15,7 @@ const getWeather = async (locationID) => {
 
 //Get City
 const getCity = async (city) => {
+
   const base = 'http://dataservice.accuweather.com/locations/v1/cities/search'
   const query = `?apikey=${key}&q=${city}`
 
@@ -24,10 +25,4 @@ const getCity = async (city) => {
   return data[0]
 }
 
-getCity('San Antonio').then(data => {
-  return getWeather(data.Key)
-  }).then(data => {
-    console.log(data)
-  })
-  .catch(err => console.log(err))
 
