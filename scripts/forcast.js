@@ -1,4 +1,4 @@
-const key = 'PUT YOUR API KEY HERE'
+const key = 'cW9Vgpxkxp9AwEOZJEjyYCfZbRXvZ61m'
 
 //Get Weather Info
 
