@@ -26,7 +26,6 @@ const updateUI = (data) => {
 const iconSrc = `img/icons/${weather.WeatherIcon}.svg`;
 icon.setAttribute('src', iconSrc);
 
-
 let timeSrc = weather.IsDayTime ? 'img/day.svg' : 'img/night.svg';
 time.setAttribute('src', timeSrc);
 
@@ -34,7 +33,7 @@ time.setAttribute('src', timeSrc);
   if(card.classList.contains('d-none')){
     card.classList.remove('d-none');
   }
-};
+}
 
 // Update City Info
 const UpdateCity = async (city) => {
