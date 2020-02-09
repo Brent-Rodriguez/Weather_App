@@ -11,7 +11,7 @@ const updateUI = (data) => {
   //Destructured Properties
   const { cityInfo, weather} = data
 
-
+  
   // Update Details
   details.innerHTML = `
     <h5 class="my-3">${cityInfo.EnglishName}</h5>
@@ -26,13 +26,9 @@ const updateUI = (data) => {
 const iconSrc = `img/icons/${weather.WeatherIcon}.svg`;
 icon.setAttribute('src', iconSrc);
 
-let timeSrc = null;
-  if(weather.IsDayTime){
-    timeSrc = 'img/day.svg';
-  } else {
-    timeSrc = 'img/night.svg';
-  }
-  time.setAttribute('src', timeSrc);
+
+let timeSrc = weather.IsDayTime ? 'img/day.svg' : 'img/night.svg';
+time.setAttribute('src', timeSrc);
 
   // Remove d-none Class
   if(card.classList.contains('d-none')){
@@ -40,18 +36,21 @@ let timeSrc = null;
   }
 };
 
-
+// Update City Info
 const UpdateCity = async (city) => {
 
   const cityInfo = await getCity(city)
   const weather = await getWeather(cityInfo.Key)
 
+
   return {
     cityInfo,
-    weather
+    weather 
   }
 }
 
+
+// Submit Input
 cityForm.addEventListener('submit', e => {
   e.preventDefault()
 
