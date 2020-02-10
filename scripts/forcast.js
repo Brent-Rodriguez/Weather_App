@@ -1,4 +1,4 @@
-const key = 'PUT YOUR API KEY HERE'
+const key = 'TpJ3xz0GVMAEqIqCxzQkepNF9fWJ3P6S'
 
 //Get Weather Info
 const getWeather = async (locationID) => {
