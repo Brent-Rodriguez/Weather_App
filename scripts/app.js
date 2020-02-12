@@ -64,7 +64,6 @@ cityForm.addEventListener('submit', e => {
     .catch(err => console.log(err))
 
     // Set LocalStorage
-
     localStorage.setItem('loadCity', city)
 })
 
